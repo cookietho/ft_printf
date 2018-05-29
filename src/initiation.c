@@ -6,7 +6,7 @@
 /*   By: minakim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 18:21:54 by minakim           #+#    #+#             */
-/*   Updated: 2018/05/28 20:45:09 by minakim          ###   ########.fr       */
+/*   Updated: 2018/05/29 16:18:08 by minakim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,11 @@ intmax_t	get_number(t_args *format, va_list arg)
 	else if (format->flag == 6)
 		digit = va_arg(arg, size_t);
 	else
-		digit = va_arg(arg, int);
-	return (digit);
+	{
+		digit = (int)va_arg(arg, intmax_t);
+		printf("digit is: |%jd|\n", digit);
+	}
+		return (digit);
 }
 
 uintmax_t	get_u_number(t_args *format, va_list arg)
