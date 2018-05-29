@@ -6,7 +6,7 @@
 /*   By: minakim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 18:21:54 by minakim           #+#    #+#             */
-/*   Updated: 2018/05/29 16:18:08 by minakim          ###   ########.fr       */
+/*   Updated: 2018/05/29 16:34:50 by minakim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,39 @@ intmax_t	get_number(t_args *format, va_list arg)
 	intmax_t	digit;
 
 	if (format->conversion != 'D' && format->flag == 1)
+	{
 		digit = (short int)va_arg(arg, int);
+		printf("digit is short int : |%jd|\n", digit);
+	}
 	else if (format->flag == 2)
+	{
 		digit = (char)va_arg(arg, int);
+		printf("digit is char signed : |%jd|\n", digit);
+	}
 	else if (format->conversion == 'D' || format->flag == 3)
+	{
 		digit = va_arg(arg, long);
+		printf("digit is long : |%jd|\n", digit);
+	}
 	else if (format->flag == 4)
+	{
 		digit = va_arg(arg, long long);
+		printf("digit is long long : |%jd|\n", digit);
+	}
 	else if (format->flag == 5)
+	{
 		digit = va_arg(arg, intmax_t);
+		printf("digit is intmax_t : |%jd|\n", digit);
+	}
 	else if (format->flag == 6)
+	{
 		digit = va_arg(arg, size_t);
+		printf("digit is size_t : |%jd|\n", digit);
+	}
 	else
 	{
 		digit = (int)va_arg(arg, intmax_t);
-		printf("digit is: |%jd|\n", digit);
+		printf("digit is int : |%jd|\n", digit);
 	}
 		return (digit);
 }
