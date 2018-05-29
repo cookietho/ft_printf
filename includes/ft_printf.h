@@ -6,7 +6,7 @@
 /*   By: minakim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 16:01:11 by minakim           #+#    #+#             */
-/*   Updated: 2018/05/28 20:41:14 by minakim          ###   ########.fr       */
+/*   Updated: 2018/05/28 21:13:21 by minakim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <inttypes.h>
 # include "../libft/libft.h"
 
 typedef struct	s_args
