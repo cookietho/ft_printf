@@ -6,7 +6,7 @@
 /*   By: minakim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 18:09:00 by minakim           #+#    #+#             */
-/*   Updated: 2018/05/29 17:09:07 by minakim          ###   ########.fr       */
+/*   Updated: 2018/05/29 17:13:08 by minakim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int		ft_printf(char *string, ...)
 	int			count;
 	char		*str;
 
+	printf("%s\n", string);
 	count = 0;
 	va_start(arg, string);
 	str = string;
