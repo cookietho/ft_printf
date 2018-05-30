@@ -6,7 +6,7 @@
 /*   By: minakim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 18:21:54 by minakim           #+#    #+#             */
-/*   Updated: 2018/05/29 17:08:41 by minakim          ###   ########.fr       */
+/*   Updated: 2018/05/29 17:23:57 by minakim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_args		*initialization(void)
 	format->precis_dot = 0;
 	format->precis = 0;
 	format->conversion = '\0';
+	format->flag = 0;
 	return (format);
 }
 
