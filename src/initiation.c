@@ -6,7 +6,7 @@
 /*   By: minakim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 18:21:54 by minakim           #+#    #+#             */
-/*   Updated: 2018/05/29 16:34:50 by minakim          ###   ########.fr       */
+/*   Updated: 2018/05/29 17:05:49 by minakim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ intmax_t	get_number(t_args *format, va_list arg)
 {
 	intmax_t	digit;
 
+	printf("%c\n", format->conversion);
+	printf("%d\n", format->flag);
 	if (format->conversion != 'D' && format->flag == 1)
 	{
 		digit = (short int)va_arg(arg, int);
