@@ -6,7 +6,7 @@
 #    By: minakim <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/22 16:09:48 by minakim           #+#    #+#              #
-#    Updated: 2018/05/22 17:16:54 by minakim          ###   ########.fr        #
+#    Updated: 2018/05/29 18:03:02 by minakim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,6 @@ SRC = src/ft_printf.c\
 	  src/specifier2.c\
 	  src/specifier3.c\
 	  src/print_format.c\
-	#   src/jfj.c
 
 OBJ = $(SRC:.c=.o)
 OBJ_DIR = obj
