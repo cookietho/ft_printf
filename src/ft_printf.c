@@ -6,7 +6,7 @@
 /*   By: minakim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 18:09:00 by minakim           #+#    #+#             */
-/*   Updated: 2018/05/25 16:35:03 by minakim          ###   ########.fr       */
+/*   Updated: 2018/05/29 17:09:07 by minakim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int		parsing(va_list arg, char **str, int count)
 		argstr = *check_width(&argstr, format, arg);
 		argstr = *check_precision(&argstr, format, arg);
 		argstr = *check_extra(&argstr, format);
+		printf("parsing flag check : |%d|\n", format->flag);
 		argstr = *check_conversion(&argstr, format);
 		count = print_format(format, arg, count);
 		if (format->count > 0)
